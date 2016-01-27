@@ -35,6 +35,9 @@ brew install git
 echo '*** install google chrome ***'
 brew cask install google-chrome
 
+echo '*** install google drive ***'
+brew cask install google-drive
+
 echo '*** install dropbox ***'
 brew cask install dropbox
 
