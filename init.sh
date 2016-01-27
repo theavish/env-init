@@ -116,6 +116,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Set standby delay to 24 hours
 sudo pmset -a standbydelay 86400
 
+# Link Cask Apps to Alfred
+brew cask alfred link
+
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
