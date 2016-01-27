@@ -33,70 +33,70 @@ echo '*** install git ***'
 brew install git
 
 echo '*** install google chrome ***'
-brew cask install google-chrome
+brew cask install --appdir="/Applications" google-chrome
 
 echo '*** install google drive ***'
-brew cask install google-drive
+brew cask install --appdir="/Applications" google-drive
 
 echo '*** install dropbox ***'
-brew cask install dropbox
+brew cask install --appdir="/Applications" dropbox
 
 echo '*** install transmission ***'
-brew cask install transmission
+brew cask install --appdir="/Applications" transmission
 
 echo '*** iterm2 ***'
-brew cask install iterm2
+brew cask install --appdir="/Applications" iterm2
 
 echo '*** install slack ***'
-brew cask install slack
+brew cask install --appdir="/Applications" slack
 
 echo '*** install skype ***'
-brew cask install skype
+brew cask install --appdir="/Applications" skype
 
 echo '*** install sublime text 3 ***'
-brew cask install sublime-text
+brew cask install --appdir="/Applications" sublime-text
 
 echo '*** install poker stars ***'
-brew cask install pokerstars
+brew cask install --appdir="/Applications" pokerstars
 
 echo '*** install steam ***'
-brew cask install steam
+brew cask install --appdir="/Applications" steam
 
 echo '*** install league of legends ***'
-brew cask install league-of-legends
+brew cask install --appdir="/Applications" league-of-legends
 
 echo '*** install open emu ***'
-brew cask install openemu
+brew cask install --appdir="/Applications" openemu
 
 echo '*** install alfred ***'
-brew cask install alfred
+brew cask install --appdir="/Applications" alfred
 
 echo '*** install flux ***'
-brew cask install flux
+brew cask install --appdir="/Applications" flux
 
 echo '*** install hyperswitch ***'
-brew cask install hyperswitch
+brew cask install --appdir="/Applications" hyperswitch
 
 echo '*** install keka ***'
-brew cask install keka
+brew cask install --appdir="/Applications" keka
 
 echo '*** install scroll reverser ***'
-brew cask install scroll-reverser
+brew cask install --appdir="/Applications" scroll-reverser
 
 echo '*** install razer synapse ***'
-brew cask install razer-synapse
+brew cask install --appdir="/Applications" razer-synapse
 
 echo '*** install spotify ***'
-brew cask install spotify
+brew cask install --appdir="/Applications" spotify
 
 echo '*** install spotify notifications ***'
-brew cask install spotify-notifications
+brew cask install --appdir="/Applications" spotify-notifications
 
 echo '*** install spotifree ***'
-brew cask install spotifree
+brew cask install --appdir="/Applications" spotifree
 
 echo '*** install vlc ***'
-brew cask install vlc
+brew cask install --appdir="/Applications" vlc
 
 echo '*** install ohmyzsh ***'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
