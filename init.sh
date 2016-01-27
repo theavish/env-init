@@ -1,7 +1,7 @@
 # Ask for the administrator password upfront.
 sudo -v
 
-
+xcode-select --install &
 
 ##############################
 ### Software Installations ###
@@ -313,6 +313,9 @@ echo '
   ]
 }
 ' > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+
+# Disable local Time Machine snapshots
+sudo tmutil disablelocal
 
 
 #############################
