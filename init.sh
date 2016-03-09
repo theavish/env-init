@@ -242,8 +242,8 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
 
-# create folder for screenshots on desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
+# create folder for screenshots in documents
+defaults write com.apple.screencapture location -string "${HOME}/Documents/screenshots"
 
 # enable hidpi mode
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
