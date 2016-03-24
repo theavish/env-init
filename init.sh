@@ -89,9 +89,6 @@ brew cask install --appdir="/Applications" slack
 echo '*** install skype ***'
 brew cask install --appdir="/Applications" skype
 
-echo '*** install sublime text 3 ***'
-brew cask install --appdir="/Applications" sublime-text3
-
 echo '*** install steam ***'
 brew cask install --appdir="/Applications" steam
 
@@ -137,8 +134,15 @@ brew cask install --appdir="/Applications" dropbox
 echo '*** install cakebrew ***'
 brew cask install cakebrew
 
+echo '*** install sublime text 3 ***'
+brew tap caskroom/versions
+brew cask install --appdir="/Applications" sublime-text3
+
 echo '*** cleaning up cask installs ***'
 brew cask cleanup
+
+echo '*** install quick-look plugins ***'
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
 echo '*** install ohmyzsh ***'
 sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -324,6 +328,10 @@ defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 echo '*** reformat copying email addresses in mail.app ***'
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# show battery percentage
+echo '*** show battery percentage ***'
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+
 #disable gatekeeper
 echo '*** disable gatekeeper ***'
 sudo spctl --master-disable
@@ -411,3 +419,4 @@ git config --global core.editor "subl -n -w"
 echo '*** set sublime text as default text editor os-wide ***'
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
 '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+
