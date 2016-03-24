@@ -348,10 +348,6 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 echo '*** change crash reporter to notification ***'
 defaults write com.apple.CrashReporter UseUNC 1
 
-# download sublime package manager
-echo '*** download sublime package manager ***'
-curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
-
 # create global .gitignore
 echo '*** create global .gitignore ***'
 curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/gitignore.txt > ~/.gitignore
@@ -362,14 +358,9 @@ git config --global user.name "Avi Samloff"
 git config --global user.email "avi.samloff@gmail.com"
 git config --global credential.helper osxkeychain
 
-
 # update PATH
 echo '*** update path ***'
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-
-# set sublime packages
-echo '*** set sublime packages ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
 
 # Disable local Time Machine snapshots
 echo '*** disable local time machine snapshots ***'
@@ -420,3 +411,10 @@ echo '*** set sublime text as default text editor os-wide ***'
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
 '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
+# set sublime packages
+echo '*** set sublime packages ***'
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+
+# download sublime package manager
+echo '*** download sublime package manager ***'
+curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
