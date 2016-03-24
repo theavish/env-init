@@ -137,6 +137,9 @@ brew cask install --appdir="/Applications" dropbox
 echo '*** cleaning up cask installs ***'
 brew cask cleanup
 
+echo '*** install cakebrew ***'
+brew cask install cakebrew
+
 echo '*** install ohmyzsh ***'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
