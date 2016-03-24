@@ -1,0 +1,19 @@
+{
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "BracketHighlighter",
+    "Color Highlighter",
+    "GitGutter",
+    "HTML-CSS-JS Prettify",
+    "Package Control",
+    "Predawn",
+    "SideBarEnhancements",
+    "SublimeLinter",
+    "SublimeLinter-jshint",
+    "Theme - Spacegray"
+  ]
+}
