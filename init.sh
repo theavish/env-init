@@ -44,7 +44,7 @@ fi
 ##############################
 
 echo '*** install homebrew ***'
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -#fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
 echo '*** install brew cask ***'
@@ -134,14 +134,14 @@ brew cask install --appdir="/Applications" vlc
 echo '*** install dropbox ***'
 brew cask install --appdir="/Applications" dropbox
 
-echo '*** cleaning up cask installs ***'
-brew cask cleanup
-
 echo '*** install cakebrew ***'
 brew cask install cakebrew
 
+echo '*** cleaning up cask installs ***'
+brew cask cleanup
+
 echo '*** install ohmyzsh ***'
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 
@@ -342,38 +342,11 @@ defaults write com.apple.CrashReporter UseUNC 1
 
 # download sublime package manager
 echo '*** download sublime package manager ***'
-curl https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
-
-# download .gitconfig
-echo '*** create global .gitconfig ***'
-curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig > ~/.gitconfig
+curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 
 # create global .gitignore
 echo '*** create global .gitignore ***'
-echo '
-# Folder view configuration files
-.DS_Store
-Desktop.ini
-
-# Thumbnail cache files
-._*
-Thumbs.db
-
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
-
-# Compiled Python files
-*.pyc
-
-# Compiled C++ files
-*.out
-
-# Application specific files
-venv
-node_modules
-.sass-cache
-' > ~/.gitignore
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/gitignore.txt > ~/.gitignore
 
 # set git user info and credentials
 echo '*** set git user info and credentials ***'
@@ -388,27 +361,7 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
 # set sublime packages
 echo '*** set sublime packages ***'
-echo '
-{
-  "bootstrapped": true,
-  "in_process_packages":
-  [
-  ],
-  "installed_packages":
-  [
-    "BracketHighlighter",
-    "Color Highlighter",
-    "GitGutter",
-    "HTML-CSS-JS Prettify",
-    "Package Control",
-    "Predawn",
-    "SideBarEnhancements",
-    "SublimeLinter",
-    "SublimeLinter-jshint",
-    "Theme - Spacegray"
-  ]
-}
-' > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
 
 # Disable local Time Machine snapshots
 echo '*** disable local time machine snapshots ***'
