@@ -1,6 +1,21 @@
 # Ask for the administrator password upfront.
 sudo -v
 
+##########################
+### Get info from user ###
+##########################
+computer_name=' '
+user_name=' '
+user_email=' '
+
+echo -n "What would you like your computer to be known as on the network? ex:Joe's Macbook"
+read computer_name
+
+echo -n 'What is your name? (This is just for git)'
+read user_name
+
+echo -n 'What is your email address? (Again, just for git)'
+read user_email
 
 #########################
 ### Install XCode CLI ###
@@ -39,6 +54,8 @@ if ! xcode-select --print-path &> /dev/null; then
 
 fi
 
+
+
 ##############################
 ### Software Installations ###
 ##############################
@@ -68,75 +85,78 @@ npm install -g nodemon
 echo '*** install git ***'
 brew install git
 
+echo '*** change default cask install location to ~/Applications ***'
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 echo '*** install google chrome ***'
-brew cask install --appdir="/Applications" google-chrome
+brew cask install google-chrome
 
 echo '*** install google drive ***'
-brew cask install --appdir="/Applications" google-drive
+brew cask install google-drive
 
 echo '*** install dropbox ***'
-brew cask install --appdir="/Applications" dropbox
+brew cask install dropbox
 
 echo '*** install transmission ***'
-brew cask install --appdir="/Applications" transmission
+brew cask install transmission
 
 echo '*** iterm2 ***'
-brew cask install --appdir="/Applications" iterm2
+brew cask install iterm2
 
 echo '*** install slack ***'
-brew cask install --appdir="/Applications" slack
+brew cask install slack
 
 echo '*** install skype ***'
-brew cask install --appdir="/Applications" skype
+brew cask install skype
 
 echo '*** install steam ***'
-brew cask install --appdir="/Applications" steam
+brew cask install steam
 
 echo '*** install league of legends ***'
-brew cask install --appdir="/Applications" league-of-legends
+brew cask install league-of-legends
 
 echo '*** install open emu ***'
-brew cask install --appdir="/Applications" openemu
+brew cask install openemu
 
 echo '*** install alfred ***'
-brew cask install --appdir="/Applications" alfred
+brew cask install alfred
 
 echo '*** install flux ***'
-brew cask install --appdir="/Applications" flux
+brew cask install flux
 
 echo '*** install hyperswitch ***'
-brew cask install --appdir="/Applications" hyperswitch
+brew cask install hyperswitch
 
 echo '*** install keka ***'
-brew cask install --appdir="/Applications" keka
+brew cask install keka
 
 echo '*** install scroll reverser ***'
-brew cask install --appdir="/Applications" scroll-reverser
+brew cask install scroll-reverser
 
 echo '*** install razer synapse ***'
-brew cask install --appdir="/Applications" razer-synapse
+brew cask install razer-synapse
 
 echo '*** install spotify ***'
-brew cask install --appdir="/Applications" spotify
+brew cask install spotify
 
 echo '*** install spotify notifications ***'
-brew cask install --appdir="/Applications" spotify-notifications
+brew cask install spotify-notifications
 
 echo '*** install spotifree ***'
-brew cask install --appdir="/Applications" spotifree
+brew cask install spotifree
 
 echo '*** install vlc ***'
-brew cask install --appdir="/Applications" vlc
+brew cask install vlc
 
 echo '*** install dropbox ***'
-brew cask install --appdir="/Applications" dropbox
+brew cask install dropbox
 
 echo '*** install cakebrew ***'
 brew cask install cakebrew
 
 echo '*** install sublime text 3 ***'
 brew tap caskroom/versions
-brew cask install --appdir="/Applications" sublime-text3
+brew cask install sublime-text3
 
 echo '*** cleaning up cask installs ***'
 brew cask cleanup
@@ -155,10 +175,10 @@ sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/
 
 # Set computer name
 echo '*** set computer name ***'
-sudo scutil --set ComputerName "avisamloff"
-sudo scutil --set HostName "avisamloff"
-sudo scutil --set LocalHostName "avisamloff"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "avisamloff"
+sudo scutil --set ComputerName $computer_name
+sudo scutil --set HostName $computer_name
+sudo scutil --set LocalHostName $computer_name
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $computer_name
 
 # Set standby delay to 24 hours
 echo '*** set standby delay ***'
@@ -354,8 +374,8 @@ curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/gitign
 
 # set git user info and credentials
 echo '*** set git user info and credentials ***'
-git config --global user.name "Avi Samloff"
-git config --global user.email "avi.samloff@gmail.com"
+git config --global user.name $user_name
+git config --global user.email $user_email
 git config --global credential.helper osxkeychain
 
 # update PATH
@@ -365,6 +385,7 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 # Disable local Time Machine snapshots
 echo '*** disable local time machine snapshots ***'
 sudo tmutil disablelocal
+
 
 
 #############################
@@ -418,3 +439,7 @@ curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublim
 # download sublime package manager
 echo '*** download sublime package manager ***'
 curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
+
+# set sublime settings
+echo '*** set sublime preferences ***'
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-preferences.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
