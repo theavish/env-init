@@ -218,9 +218,11 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-
 # prevent Photos from opening when inserting external media
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# sets clock to 24-hour mode
+defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 
 # disable hibernate
 sudo pmset -a hibernatemode 0
