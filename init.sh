@@ -164,9 +164,6 @@ brew cask cleanup
 echo '*** install quick-look plugins ***'
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
-echo '*** install ohmyzsh ***'
-sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 
 
 #########################
@@ -443,3 +440,12 @@ curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avi
 # set sublime settings
 echo '*** set sublime preferences ***'
 curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-preferences.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+
+
+
+#######################
+### install ohmyzsh ###
+#######################
+
+echo '*** install ohmyzsh ***'
+sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
