@@ -90,7 +90,7 @@ echo '*** install skype ***'
 brew cask install --appdir="/Applications" skype
 
 echo '*** install sublime text 3 ***'
-brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" sublime-text3
 
 echo '*** install steam ***'
 brew cask install --appdir="/Applications" steam
