@@ -213,9 +213,11 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # check for updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# disable smart quotes and smart dashes
+# disable smart quotes, auto-correct spelling, and smart dashes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 
 # prevent Photos from opening when inserting external media
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
