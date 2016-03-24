@@ -272,8 +272,8 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 # set column view as default
 defaults write com.apple.finder FXPreferredViewStyle Clmv
 
-# set dock icons to 36px
-defaults write com.apple.dock tilesize -int 36
+# set dock icons to 48px
+defaults write com.apple.dock tilesize -int 48
 
 # disable focus ring
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
