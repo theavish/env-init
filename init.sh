@@ -134,6 +134,9 @@ brew cask install --appdir="/Applications" vlc
 echo '*** install dropbox ***'
 brew cask install --appdir="/Applications" dropbox
 
+echo '*** cleaning up cask installs ***'
+brew cask cleanup
+
 echo '*** install ohmyzsh ***'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
