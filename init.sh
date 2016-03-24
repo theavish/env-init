@@ -199,9 +199,6 @@ done
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
-# hide spotlight icon
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-
 # expand save prompt
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
