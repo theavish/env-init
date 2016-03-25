@@ -56,6 +56,15 @@ fi
 
 
 
+##################################
+### Change ownership of cellar ###
+##################################
+
+echo '*** gaining ownership of /usr/local/Cellar ***'
+chown -R $USER /usr/local/Cellar
+
+
+
 ##############################
 ### Software Installations ###
 ##############################
@@ -431,15 +440,15 @@ defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandle
 
 # set sublime packages
 echo '*** set sublime packages ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
 
 # download sublime package manager
 echo '*** download sublime package manager ***'
-curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
+curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 
 # set sublime settings
 echo '*** set sublime preferences ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-preferences.txt > /Users/avisamloff/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-preferences.txt > /Users/$USER/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
 
 
 
