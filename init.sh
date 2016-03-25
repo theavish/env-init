@@ -157,9 +157,6 @@ brew cask install spotifree
 echo '*** install vlc ***'
 brew cask install vlc
 
-echo '*** install dropbox ***'
-brew cask install dropbox
-
 echo '*** install cakebrew ***'
 brew cask install cakebrew
 
