@@ -429,6 +429,14 @@ defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.n
 ### Sublime Text Settings ###
 #############################
 
+# create symlink to sublime
+echo '*** create symlink to sublime text ***'
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+# open sublime to initialize filepaths
+echo '*** open sublime to initialize filepaths ***'
+subl
+
 # set sublime as default text editor in git
 echo '*** set sublime text as default text editor in git ***'
 git config --global core.editor "subl -n -w"
