@@ -8,13 +8,13 @@ computer_name=' '
 user_name=' '
 user_email=' '
 
-echo -n "What would you like your computer to be known as on the network? ex:Joe's Macbook"
+echo -n "What would you like your computer to be known as on the network? ex:Joe's Macbook  "
 read computer_name
 
-echo -n 'What is your name? (This is just for git)'
+echo -n 'What is your name? (This is just for git)  '
 read user_name
 
-echo -n 'What is your email address? (Again, just for git)'
+echo -n 'What is your email address? (Again, just for git)  '
 read user_email
 
 #########################
@@ -61,7 +61,7 @@ fi
 ##################################
 
 echo '*** gaining ownership of /usr/local/Cellar ***'
-chown -R $USER /usr/local/Cellar
+sudo chmod a+w /usr/local/Cellar
 
 
 
