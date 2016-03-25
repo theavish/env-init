@@ -56,12 +56,12 @@ fi
 
 
 
-##################################
-### Change ownership of cellar ###
-##################################
+#######################################
+### Change ownership of /usr/local/ ###
+#######################################
 
-echo '*** gaining ownership of /usr/local/Cellar ***'
-sudo chmod a+w /usr/local/Cellar
+echo '*** gaining ownership of /usr/local/ ***'
+sudo chmod a+w /usr/local/
 
 
 
