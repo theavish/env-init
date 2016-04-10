@@ -276,6 +276,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 echo '*** prevent photos from opening when instering drives ***'
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+# Disable attachment previews in Mail.app
+echo '*** disable attachment previews in Mail.app'
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+
 # sets clock to 24-hour mode
 echo '*** set clock to 24-hour mode ***'
 defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
